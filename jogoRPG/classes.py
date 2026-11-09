@@ -1,16 +1,37 @@
+# SISTEMA DE CLASSES DE JOGO RPG DE PRIMEIRA GUERRA MUNDIAL
+
+# CLASSE PAI ----------------------------------------------------------
+
 class personagem:
     def __init__(self, forca, resistencia, vigor, agilidade):
-        self.forca = forca
-        self.resistencia = resistencia
-        self.vigor = vigor
-        self.agilidade = agilidade
+        self.__classe = "base"
+        self.__forca = forca
+        self.__resistencia = resistencia
+        self.__vigor = vigor
+        self.__agilidade = agilidade
 
-    def info(self):
-        print("======= INFO PERSONAGEM =======")
-        print(f"| Força: {self.forca} pontos |\n"
-              f"| Resistência: {self.resistencia} pontos |\n"
-              f"| Vigor: {self.vigor} pontos |\n"
-              f"| Agilidade: {self.agilidade} pontos |\n")
+    def __str__(self):
+        print(f"======= INFO {(self.__classe).upper()} =======")
+        print(f"| Força: {self.__forca} pontos |\n"
+              f"| Resistência: {self.__resistencia} pontos |\n"
+              f"| Vigor: {self.__vigor} pontos |\n"
+              f"| Agilidade: {self.__agilidade} pontos |\n")
 
-personagem1 = personagem(1, 2, 3, 4)
-personagem1.info()
+# CLASSES FILHAS ----------------------------------------------------------
+
+class fuzileiro:
+    def __init__(self, forca, resistencia, vigor, agilidade):
+        super().__init__(forca, resistencia, vigor, agilidade)
+
+class medico:
+    def __init__(self, forca, resistencia, vigor, agilidade):
+        super().__init__(forca, resistencia, vigor, agilidade)
+
+class artilheiro:
+    def __init__(self, forca, resistencia, vigor, agilidade):
+        super().__init__(forca, resistencia, vigor, agilidade)
+
+class oficial:
+    def __init__(self, forca, resistencia, vigor, agilidade, subordinados):
+        super().__init__(forca, resistencia, vigor, agilidade)
+        self.subordinados = subordinados
