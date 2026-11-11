@@ -23,5 +23,10 @@
 <br>
 <br>
 <br>
+
+## v1.3
+
+> Reformulação da janela(Sim, denovo)
+
 <img src="scr/images/hyena.jpg">
 
