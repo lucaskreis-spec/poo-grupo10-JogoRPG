@@ -1,33 +1,39 @@
 from tkinter import *
 
-from scr.models.personagemBASE import personagem
-from scr.models.fuzileiro import fuzileiro
-from scr.models.medico import medico
-from scr.models.artilheiro import artilheiro
-from scr.models.oficial import oficial
+from scr.models.personagem import personagem
+from scr.models.ranged import ranged
+from scr.models.magic import magic
+from scr.models.melee import melee
+from scr.models.summoner import summoner
 
-fuzileiro_ = fuzileiro()
+summoner_ = summoner()
 
-root = Tk()
+janela = Tk()
+icon = PhotoImage(file=r'scr/images/icon.png')
 
-forcalabel = Label(root, text="força")
-resistencialabel = Label(root, text="resistência")
-vigotlabel = Label(root, text="vigor")
-agilidadelabel = Label(root, text="agilidade")
+janela.iconphoto(True, icon)
+janela.title('Personalize seu personagem')
+janela.geometry('690x480')
+janela.configure(background='black')
 
-forcadatalabel = Label(root, text=str(fuzileiro_.get_data()[0]))
-resistenciadatalabel = Label(root, text=str(fuzileiro_.get_data()[1]))
-vigordatalabel = Label(root, text=str(fuzileiro_.get_data()[2]))
-agilidadedatalabel = Label(root, text=str(fuzileiro_.get_data()[3]))
+#forcalabel = Label(root, text="força")
+#resistencialabel = Label(root, text="resistência")
+#vigotlabel = Label(root, text="vigor")
+#agilidadelabel = Label(root, text="agilidade")
 
-forcalabel.grid(row=1, column=0)
-resistencialabel.grid(row=2, column=0)
-vigotlabel.grid(row=3, column=0)
-agilidadelabel.grid(row=4, column=0)
+#forcadatalabel = Label(root, text=str(fuzileiro_.get_data()[0]))
+#resistenciadatalabel = Label(root, text=str(fuzileiro_.get_data()[1]))
+#vigordatalabel = Label(root, text=str(fuzileiro_.get_data()[2]))
+#agilidadedatalabel = Label(root, text=str(fuzileiro_.get_data()[3]))
 
-forcadatalabel.grid(row=1, column=1)
-resistenciadatalabel.grid(row=2, column=1)
-vigordatalabel.grid(row=3, column=1)
-agilidadedatalabel.grid(row=4, column=1)
+#forcalabel.grid(row=1, column=0)
+#resistencialabel.grid(row=2, column=0)
+#vigotlabel.grid(row=3, column=0)
+#agilidadelabel.grid(row=4, column=0)
 
-root.mainloop()
+#forcadatalabel.grid(row=1, column=1)
+#resistenciadatalabel.grid(row=2, column=1)
+#vigordatalabel.grid(row=3, column=1)
+#agilidadedatalabel.grid(row=4, column=1)
+
+janela.mainloop()
