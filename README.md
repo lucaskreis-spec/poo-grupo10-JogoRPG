@@ -19,12 +19,17 @@
 > Reformulação da janela
 
 **Esta versão é somente uma base para a bifurcação de tarefas entre Kreis e Ranieri**
+
+## v1.4
+
+> inserção do link canva https://canva.link/d8cdfumq2axv68z
+
 <br>
 <br>
 <br>
 <br>
 
-## v1.3
+## v1.5
 
 > Reformulação da janela(Sim, denovo)
 
