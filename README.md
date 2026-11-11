@@ -1,3 +1,7 @@
+#POO - JOGO RPG
+
+Grupo 10 : Lucas Kreis, Ranieri e Waleska
+
 # ATUALIZAÇÕES DE CADA VERSÃO
 
 ## v1.2
