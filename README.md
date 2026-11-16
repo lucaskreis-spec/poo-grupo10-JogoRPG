@@ -42,3 +42,6 @@
 
 > Adição da classe inimigo e dano crítico às classes
 
+## v1.8
+
+> classes filhas com ##super()._init_()
