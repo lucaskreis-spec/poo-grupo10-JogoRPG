@@ -33,5 +33,8 @@
 
 > Reformulação da janela(Sim, denovo)
 
+## v1.6
+> Desenvolvimento dos slides em 50%
+
 <img src="scr/images/hyena.jpg">
 
