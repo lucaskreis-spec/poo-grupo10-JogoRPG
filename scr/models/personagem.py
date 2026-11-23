@@ -1,8 +1,8 @@
 class personagem:
-    def __init__(self):
-        self.nome = "null"
-        self.classe = "null"
-        self.dificuldade = "null"
+    def __init__(self, nome, classe, dificuldade):
+        self.nome = nome
+        self.classe = classe
+        self.dificuldade = dificuldade
 
         self.__multdano = 0
         self.__multvida = 0

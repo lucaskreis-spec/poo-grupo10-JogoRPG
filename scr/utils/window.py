@@ -91,7 +91,7 @@ class menu(window):
                               font=Font(family='Arial', size=15),
                               bg="#1c1c1c",
                               fg="#ffffff")
-        criar_but.config(command=self.send_data)
+        criar_but.config(command=self.def_data)
         criar_but.pack(pady=20)
 
     def change_class(self):
@@ -115,10 +115,14 @@ class menu(window):
         self.mode_but.config(text=modes.modes[self.currentmodeidx_])
         self.mode_but.pack()
 
-    def send_data(self):
+    def def_data(self):
         playerdata.nome = self.name_entry.get()
         playerdata.classe = classes.classes[self.currentclassidx_][0]
         playerdata.dificuldade = modes.modes[self.currentmodeidx_]
+        playerdata.classe_instance = classes.classes[self.currentclassidx_][1]
+        playerdata.classe_instance.nome = playerdata.nome
+        playerdata.classe_instance.classe = playerdata.classe
+        playerdata.classe_instance.dificuldade = playerdata.dificuldade
 
         self.flap.destroy()
 
