@@ -1,11 +1,10 @@
-from scr.models.personagem import personagem
-from scr.models.ranged import ranged
-from scr.models.magic import magic
-from scr.models.melee import melee
-from scr.models.summoner import summoner
+from scr.models.ranged import Ranged
+from scr.models.magic import Magic
+from scr.models.melee import Melee
+from scr.models.summoner import Summoner
 
-classes = [['ranged', ranged],
-           ['magic', magic],
-           ['melee', melee],
-           ['summoner', summoner],
+classes = [['ranged', Ranged],
+           ['magic', Magic],
+           ['melee', Melee],
+           ['summoner', Summoner],
            ]

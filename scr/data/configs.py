@@ -1,3 +1,0 @@
-difs = ['normal',
-        'hard',
-        ]

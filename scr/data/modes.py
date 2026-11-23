@@ -1,0 +1,1 @@
+modes = ['normal', 'difícil']

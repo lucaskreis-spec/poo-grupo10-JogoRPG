@@ -36,8 +36,6 @@
 ## v1.6
 > Desenvolvimento dos slides em 50%
 
-<img src="scr/images/hyena.jpg">
-
 ## v1.7
 
 > Adição da classe inimigo e dano crítico às classes
@@ -45,3 +43,11 @@
 ## v1.8
 
 > classes filhas com ##super()._init_()
+
+## v1.9
+
+> implementação da janela "seu perfil e do script "playerdata"
+
+
+
+<img src="scr/images/hyena.jpg">
