@@ -1,13 +1,18 @@
 from scr.models.personagem import personagem
+import random
 
 class Inimigo(personagem):
     def __init__(self, multcrit):
         super().__init__()
         self.__multcrit = multcrit
+        self.__chancritnor = 0.20
 
-    def atacar(self, alvo):
+    def ataque(self, alvo):
+        sorteio = random.random()
+        if sorteio < self.__chancritnor:
+            self.__multdano = (self.__multdano * self.__multcrit) * self.__multdanodif
         print(f"{self.nome} ataca {alvo.nome}, causando {self.__multdano} de dano!")
-        alvo.recebe_dano(self.__multdano)
+        alvo.receber_dano(self.__multdano)
 
     def receber_dano(self, dano):
         self.__multvida -= self.__multdano
