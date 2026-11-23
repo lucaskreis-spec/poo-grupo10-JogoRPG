@@ -4,12 +4,19 @@ import random
 class Magic(personagem):
     def __init__(self, chancritesp, chancritnor):
         super().__init__()
-        self.chancritesp = 0.30
-        self.chancritnor = 0.20
+        self.__chancritesp = 0.30
+        self.__chancritnor = 0.20
 
-    def ataca(self, alvo):
+    def ataque(self, alvo):
         sorteio = random.random()
-        if sorteio < self.chancritnor:
+        if sorteio < self.__chancritnor:
             self.__multdano = self.__multdano * self.__multcrit
         print(f"{self.nome} ataca {alvo.nome}, causando {self.__multdano} de dano!")
         alvo.recebe_dano(self.__multdano)
+
+    def ataque_esp(self, alvo):
+        sorteio = random.random()
+        if sorteio < self.__chancritesp:
+            self.__multdano = (self.__multdano * 1.5) * self.__multcrit
+            print(f"{self.nome} usa Bola de Fogo, causando {self.__multdano} de dano!")
+

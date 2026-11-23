@@ -9,9 +9,12 @@ class personagem:
         self.__multdefesa = 0
         self.__multcrit = 2
 
-    def ataca(self, alvo):
-        print(f"{self.nome} ataca {alvo.nome}, causando {self.__multdano} de dano!")
-        alvo.recebe_dano(self.__multdano)
+    def ataque_comum(personagem):
+        personagem.ataque()
+
+    def ataque_especial(personagem):
+        personagem.ataque_especial()
+
 
     def receber_dano(self, dano):
         self.__multvida -= self.__multdano
