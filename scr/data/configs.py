@@ -1,0 +1,3 @@
+difs = ['normal',
+        'hard',
+        ]

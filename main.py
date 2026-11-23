@@ -7,6 +7,7 @@ from scr.models.magic import Magic
 from scr.models.melee import Melee
 from scr.models.summoner import Summoner
 
-cFlap =  window.setwindow()
-window.defCreatorFlap(cFlap)
-cFlap.mainloop()
+windowclass = window()
+windowclass.setwindow()
+windowclass.defCreatorFlap()
+windowclass.flap.mainloop()
