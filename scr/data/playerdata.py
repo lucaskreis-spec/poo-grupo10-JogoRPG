@@ -1,0 +1,3 @@
+nome = ""
+classe = ""
+dificuldade = ""

@@ -1,5 +1,6 @@
 from tkinter import *
 from scr.utils.window import menu
+from scr.utils.window import status
 
 from scr.models.personagem import personagem
 from scr.models.ranged import Ranged
@@ -11,3 +12,4 @@ windowclass = menu()
 windowclass.setwindow()
 windowclass.defCreatorFlap()
 windowclass.flap.mainloop()
+

@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter.font import Font
 from scr.data import classes
 from scr.data import modes
+from scr.data import playerdata
 
 class window:
     def __init__(self):
@@ -20,6 +21,7 @@ class window:
 class menu(window):
     def __init__(self):
         super().__init__()
+        self.name_entry = 0
         self.currentclass_ = classes.classes[0]
         self.currentclassidx_ = 0
         self.currentmode_ = modes.modes[0]
@@ -51,12 +53,10 @@ class menu(window):
 
         name_lab.pack(pady=10)
 
-        name_entry = tk.Entry(self.flap,
+        self.name_entry = tk.Entry(self.flap,
                               bg="#1c1c1c",
                               fg="#ffffff")
-        name_entry.pack()
-
-        print(self.currentclass_)
+        self.name_entry.pack()
 
         classe_lab = tk.Label(text='Classe:',
                               font=Font(family='Arial', size=15),
@@ -116,5 +116,50 @@ class menu(window):
         self.mode_but.pack()
 
     def send_data(self):
-        print("Mandar dados")
+        playerdata.nome = self.name_entry.get()
+        playerdata.classe = classes.classes[self.currentclassidx_][0]
+        playerdata.dificuldade = modes.modes[self.currentmodeidx_]
+
         self.flap.destroy()
+
+        windowclass = status()
+        windowclass.setwindow()
+        windowclass.defstatusflap()
+        windowclass.flap.mainloop()
+
+class status(window):
+    def __init__(self):
+        super().__init__()
+
+    def defstatusflap(self):
+        self.flap.title('Seu perfil')
+
+        title_lab = tk.Label(text='SEU PERFIL',
+                             font=Font(family='Arial', size=25),
+                             fg='white',
+                             bg='black',
+                             relief='raised',
+                             bd=10,
+                             padx=5,
+                             pady=5
+                             )
+        title_lab.pack(pady=15)
+
+        name_lab = tk.Label(text=f'nome: {playerdata.nome}',
+                            font=Font(family='Arial', size=17),
+                            bg="#1c1c1c",
+                            fg="#ffffff")
+        name_lab.pack(pady=15)
+
+        cla_lab = tk.Label(text=f'classe: {playerdata.classe}',
+                            font=Font(family=playerdata.dificuldade, size=17),
+                            bg="#1c1c1c",
+                            fg="#ffffff")
+        cla_lab.pack(pady=15)
+
+        dif_lab = tk.Label(text=f'dificuldade: {playerdata.dificuldade}',
+                            font=Font(family=playerdata.dificuldade, size=17),
+                            bg="#1c1c1c",
+                            fg="#ffffff")
+        dif_lab.pack(pady=15)
+

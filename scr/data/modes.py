@@ -1,1 +1,1 @@
-modes = ['normal', 'duro']
+modes = ['normal', 'difícil']

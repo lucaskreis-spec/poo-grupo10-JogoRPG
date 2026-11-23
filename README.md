@@ -44,6 +44,10 @@
 
 > classes filhas com ##super()._init_()
 
+## v1.9
+
+> implementação da janela "seu perfil e do script "playerdata"
+
 
 
 <img src="scr/images/hyena.jpg">
